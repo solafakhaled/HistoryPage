@@ -1,24 +1,15 @@
 import Case from './Case'
-const cases=[
-    {id:1,
-    text:'Case 1000',
-    },
-    {
-        id:2,
-        text:'Case 1100',
-        },
-    {
-        id:3,
-        text:'Case 1110',
-            }]
 
-const Cases = () => { 
 
+//create array of cases, using use state to update it later
+const Cases = ({cases, onClick}) => { 
 
     return (
-
+       //usin map to loop through cases in the cases return
         <>
-          {cases.map((case1)=>(<h3 key ={case1.id} >{case1.text}</h3>))}
+          {cases.map((case1)=>
+          (<Case key ={case1.id} case1={case1} onClick={onClick}/>))}
+         
         </>
     )
 }

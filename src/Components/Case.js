@@ -1,5 +1,5 @@
 import{FaExternalLinkAlt}from 'react-icons/fa'
-//handling each case object, adding an icon from fontawsome
+//handling each case object, adding an icon from FA
 const Case = ({case1,onClick}) => {
     return (
         <div className='task'>
