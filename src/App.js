@@ -5,18 +5,7 @@ import {useState} from 'react'
 //App is the main calling component
 //it is responsable of calling other components 
 const App = ()=>{
-  const[cases,setCase]=useState([
-    {id:1,
-    text:'Case 1000',
-    },
-    {
-        id:2,
-        text:'Case 1100',
-        },
-    {
-        id:3,
-        text:'Case 1110',
-            }])
+  const[cases,setCase]=useState([])
   //function for taking input from the search form
   const SubmitSearch=(acase)=>{
     //the function currently displays only on the console,
