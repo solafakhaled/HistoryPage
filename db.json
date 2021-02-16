@@ -1,16 +1,19 @@
 {
   "cases": [
     {"id":1,
-      "text":"Case 1000"
+      "text":"Case",
+      "Num":"1000"
       },
       
       {
           "id":2,
-          "text":"Case 1100"
+          "text":"Case",
+          "Num":"1100"
           },
       {
           "id":3,
-          "text":"Case 1110"
+          "text":"Case",
+           "Num":"1110"
               }
             ]
   

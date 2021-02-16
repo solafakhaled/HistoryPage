@@ -1,9 +1,8 @@
 const Footer=()=> {
     return (
-        <Footer>
+        <footer>
             <p>Copyright &copy; 2021</p>
-            <a href="/about">AboutUs</a>
-        </Footer>
+        </footer>
     )
 }
 

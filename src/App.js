@@ -47,6 +47,7 @@ const fetchCase=async () =>{
      <Search onSubmit={SubmitSearch}/>
      {cases.length>0? (<Cases cases={cases} onClick={GotoCase}/>):('There Are No Cases Yet')}
      <Footer/>
+
     </div>
      
   )
