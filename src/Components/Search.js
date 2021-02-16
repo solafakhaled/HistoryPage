@@ -1,20 +1,22 @@
 import{FaSearch}from 'react-icons/fa'
  import {useState} from 'react'
- //search component takes input from user and filters the 
- //case list based on it 
+ //returns the input from the user to filter based on it 
 const Search = ({onSubmit}) => {
     const [text,setText]=useState('')
+    //handling submitted input from user
     const onSubmits=(e)=>{
         e.preventDefault()
 
         if(!text){
-            alert('Please Enter A Case')
+            onSubmit('-1')
             return
         }
+        //if there is a text, send it to onSubmit
         onSubmit(text)
-        setText('')
+
     }
     return (
+        //create input and form,set the styles
         <form className='add-form' onSubmit={onSubmits}    >
            <div className='form-control'>
                <label><FaSearch

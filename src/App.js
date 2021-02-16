@@ -28,11 +28,10 @@ const fetchCase=async () =>{
   return data
 }
   //function for taking input from the search form
-  const SubmitSearch=(acase)=>{
-    //the function currently displays only on the console,
-    // it should filter later
-        console.log(acase)
-
+  const SubmitSearch=(aCase)=>{
+    //todo:see how you can let user fetch from all the database(doesn't delete it)
+        setCase(aCase===-1? setCase(cases): cases.filter((getCases)=>getCases.Num===aCase))
+        
   }
   //function to navigate to the case page with the givin id
   const GotoCase= (id)=>{
@@ -45,7 +44,7 @@ const fetchCase=async () =>{
     <div className="container">
      <Header/>
      <Search onSubmit={SubmitSearch}/>
-     {cases.length>0? (<Cases cases={cases} onClick={GotoCase}/>):('There Are No Cases Yet')}
+     {cases.length>0? (<Cases cases={cases} onClick={GotoCase} onSubmit= {SubmitSearch}/>):('There Are No Cases Yet')}
      <Footer/>
 
     </div>
