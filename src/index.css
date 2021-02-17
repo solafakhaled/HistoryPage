@@ -9,32 +9,30 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4;
-  margin-top: 300px;
+
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 70%;
   margin: 30px auto;
   overflow: auto;
-  min-height: 300px;
+  min-height: 900px;
   border: 2px solid steelblue;
   background-color: white;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: #000;
 }
 
 .header {
-  border: 2px solid rgb(70, 4, 42);
-  border-radius: 5px;
   background-color: #a1cae2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   text-align: center;
   text-indent: 10px;
-  min-height: 100px;
+  min-height: 200px;
 }
 
 .btn {
@@ -69,6 +67,7 @@ body {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .task.reminder {
@@ -91,6 +90,8 @@ body {
 
 .form-control label {
   display: block;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .form-control input {

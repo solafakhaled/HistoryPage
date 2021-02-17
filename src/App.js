@@ -42,14 +42,17 @@ const fetchCase=async () =>{
 
   //the calling for containers in the main page 
   return (
+    <div>
+          <Header/>
     <div className="container">
-     <Header/>
+ 
      <Search onSubmit={SubmitSearch}/>
      {cases.length>0? (<Cases cases={cases} onClick={GotoCase} onSubmit= {SubmitSearch}/>):('There Are No Cases Yet')}
-     <Footer/>
+     
 
     </div>
-     
+    <Footer/>
+     </div>
   )
 }
 
