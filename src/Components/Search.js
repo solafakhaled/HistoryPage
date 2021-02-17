@@ -8,7 +8,7 @@ const Search = ({onSubmit}) => {
         e.preventDefault()
 
         if(!text){
-            onSubmit('-1')
+            onSubmit(' ')
             return
         }
         //if there is a text, send it to onSubmit

@@ -29,8 +29,9 @@ const fetchCase=async () =>{
 }
   //function for taking input from the search form
   const SubmitSearch=(aCase)=>{
+       
     //todo:see how you can let user fetch from all the database(doesn't delete it)
-        setCase(aCase===-1? setCase(cases): cases.filter((getCases)=>getCases.Num===aCase))
+        setCase(aCase===''? setCase(cases): cases.filter((getCases)=>getCases.Num===aCase))
         
   }
   //function to navigate to the case page with the givin id
