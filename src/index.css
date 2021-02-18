@@ -13,19 +13,25 @@ body {
 }
 
 .container {
-  max-width: 70%;
+  max-width: 88%;
   margin: 30px auto;
   overflow: auto;
-  min-height: 900px;
-  border: 2px solid steelblue;
+  height: 500px;
+  padding :20px;
   background-color: white;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 50px;
   box-shadow: #000;
 }
-
+.label{
+  font-size: 24px;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
 .header {
-  background-color: #a1cae2;
+  background-color: #252525;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,8 +39,19 @@ body {
   text-align: center;
   text-indent: 10px;
   min-height: 200px;
-}
+  background-image: 'images/Navbar.jpg';
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
 
+}
+.logoImg{
+  justify-content: space-between;
+  align-items: center;
+ position: fixed;
+ height:450px ;
+ margin-left :40%;
+padding-top: 40px;
+}
 .btn {
   display: inline-block;
   background: #000;
@@ -46,7 +63,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
-  font-family: inherit;
+  font-family: inherit,Arial, Helvetica, sans-serif;
 }
 
 .btn:focus {

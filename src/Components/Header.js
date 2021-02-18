@@ -1,22 +1,19 @@
-import PropTypes from 'prop-types'
+import background from "./images/h2.jpg";
+import logo from "./images/logoFinal.png";
 //Header contains and displays global tools and navigation.
 const Header = ({title}) => {
 //add constructors here if needed.
     return (
- 
-        <header className='header'>
-           <h1>{title}</h1>
+
+        <header  className='header' >
+           <img  className= 'logoImg' src={logo} alt=''/>
+
         </header>
+
     )
 }
-//create default props 
-Header.defaultProps = {
-    title:'Case History'
 
-}
-//create data type 
-Header.propTypes = {
-    title: PropTypes.string.isRequired,
 
-}
 export default Header
+
+//<img className = 'headerImg' src='/images/Navbar.jpg' alt=''/>

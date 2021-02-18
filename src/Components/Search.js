@@ -19,7 +19,7 @@ const Search = ({onSubmit}) => {
         <form className='add-form' onSubmit={onSubmits}    >
            <div className='form-control'>
                
-               <label>Search in Cases History</label>
+               <label className='label'>Search in Cases History</label>
                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <input className='fa' type='text' placeholder='&#xF002; Search... '
                onChange={(e)=>setText(e.target.value)} 
