@@ -29,6 +29,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-around;
+  color: #364958;
 }
 .header {
   background-color: #252525;
@@ -85,6 +86,7 @@ padding-top: 40px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  color: #364958;
 }
 
 .task.reminder {

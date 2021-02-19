@@ -7,7 +7,12 @@ const Header = ({title}) => {
 
         <header  className='header' >
            <img  className= 'logoImg' src={logo} alt=''/>
+             <ul className='menu'>
+                <li>
+                    
+                </li>
 
+             </ul>
         </header>
 
     )
