@@ -1,5 +1,6 @@
 import background from "./images/h2.jpg";
 import logo from "./images/logoFinal.png";
+import HeaderItems from "./HeaderItems"
 //Header contains and displays global tools and navigation.
 const Header = ({title}) => {
 //add constructors here if needed.
@@ -8,10 +9,15 @@ const Header = ({title}) => {
         <header  className='header' >
            <img  className= 'logoImg' src={logo} alt=''/>
              <ul className='menu'>
-                <li>
-                    
-                </li>
-
+                 {HeaderItems.map((item,index)=>{
+                     return(
+                   <li key = {index}>
+                        <a className={item.cName} href={item.link}>
+                            {item.Name}
+                        </a>
+                    </li>
+                    )
+                 })}
              </ul>
         </header>
 

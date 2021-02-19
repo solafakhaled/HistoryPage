@@ -1,4 +1,4 @@
-const HeaderItems = [
+export const HeaderItems = [
 {
     Name:'Home',
     link:'#',
@@ -29,4 +29,13 @@ const HeaderItems = [
     cName:'Nav-links'
 
 }
+,
+{
+    Name:'Account',
+    link:'#',
+    cName:'Acc-links'
+
+}
 ]
+
+export default HeaderItems
