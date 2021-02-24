@@ -5,6 +5,7 @@ const Cases = ({cases, onClick,onSubmit}) => {
     return (
        //In the Cases array each index contains an object case
        //Using map function to loop through cases
+       //هنا يلف على الكيسس كلها 
 
         <>
           {cases.map((case1)=>

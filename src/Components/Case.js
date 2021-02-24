@@ -1,5 +1,6 @@
 import{FaExternalLinkAlt}from 'react-icons/fa'
 //handling each case object, adding an icon from FA
+//هنا يطبعها حبة حبة، من هنا اقدر اخش على وحدة
 const Case = ({case1,onClick,onSubmit}) => {
     return (
         <div className='task'>
