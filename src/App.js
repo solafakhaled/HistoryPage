@@ -9,7 +9,23 @@ const App = ()=>{
 
   //todo: Take set Case from AddCase Page
   //todo: Create the Delete Functions and tie it with the server (for Admin only)
-  const[cases,setCase]=useState([])
+  const[cases,setCase]=useState([
+    {id:1,
+      text:"Case",
+    Num:"1000"
+      },
+      
+      {
+          id:2,
+          text:"Case",
+          "Num":"1100"
+          },
+      {
+          id:3,
+          text:"Case",
+           Num:"1110"
+              }
+            ])
 //function to fetch cases from the database using json, 
 //it awaits for a promise using async
 //the function currently uses a console log to show actions, must tie it with AddPage database
@@ -31,7 +47,7 @@ const fetchCase=async () =>{
   const SubmitSearch=(aCase)=>{
        
     //todo:see how you can let user fetch from all the database(doesn't delete it)
-        setCase(aCase===''? setCase(cases): cases.filter((getCases)=>getCases.Num===aCase))
+    setCase(aCase===''? setCase(cases): cases.filter((getCases)=>getCases.Num===aCase))
         
   }
   //function to navigate to the case page with the givin id
@@ -49,7 +65,6 @@ const fetchCase=async () =>{
      <Search onSubmit={SubmitSearch}/>
      {cases.length>0? (<Cases cases={cases} onClick={GotoCase} onSubmit= {SubmitSearch}/>):('There Are No Cases Yet')}
      
-
     </div>
     <Footer/>
      </div>
