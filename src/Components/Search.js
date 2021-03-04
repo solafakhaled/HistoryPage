@@ -6,13 +6,10 @@ const Search = ({onSubmit}) => {
     const onSubmits=(e)=>{
         e.preventDefault()
 
-        if(!text){
-            onSubmit(' ')
-            return
-        }
-        //if there is a text, send it to onSubmit
+       //this function is going to be passed to the onChange sent to the app 
+       //text is the same as cases in the app
         onSubmit(text)
-
+        
     }
     return (
         //create input and form,set the styles
