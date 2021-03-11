@@ -3,13 +3,74 @@ import Footer from './Components/Footer'
 import Cases from './Components/Cases'
 import Search from './Components/Search'
 import {useState,useEffect} from 'react'
+//setting the database config
+import db from './db';
+function id() 
+{
+    // Check to see if the counter has been initialized
+    if ( typeof id.counter == 'undefined' ) 
+    {
+        // It has not... perform the initialization
+        id.counter = 0;
+    }
+
+    // Do something stupid to indicate the value
+    return ++id.counter
+}
 //App is the main calling component
 //it rule is calling other components 
-const App = ()=>{
+const App  = ()=> {
+  //-----------------------------------------------
+  //testing the database : 
+  const[cases,setCase]=useState('');
+  const handleOnChange=(e)=>{
+        setCase(e.target.value);
+  }
+  //adding cases to the db
+  const addCase=()=>{
+    const caseRef=db.database().ref("cases");
+    const case1={
+          id:id(),
+          userID:"user Who created the case",
+          sex:"male",
+          Description:"the case descriptoon",
+          path:"Likely_Pathogenic",
+          Variants:[{ID:"var1",Classification:"Likely-Pathogenic",SIFT:"0.5",AF:"0.003",Gene:"4556",Alt:"T",Ref:"TGGT",Rules:["rule1","rule2"]}
+          ,{ID:"var2",Classification:"Pathogenic",SIFT:"0.4",AF:"0.001",Gene:"2346",Alt:"C",Ref:"T",Rules:["rule1"]}
+          ,{ID:"var3",Classification:"Likely-Pathogenic",SIFT:"0.2",AF:"0.004",Gene:"6776",Alt:"ATGC",Ref:"T",Rules:["rule1","rule2"]}
+          ]
+    }
+    caseRef.push(case1);
 
+  }
+//adding rules to the db
+  function addRule(){
+    const ruleRef=db.database().ref("rules");
+    const rule1={
+          id:id(),
+          text:"MedGen:12234--> Likely-Pathogenic"
+            
+    }
+    ruleRef.push(rule1);
+  }
+  addRule();
+  users();
+//adding users to the db
+  function users(){
+    const usersRef=db.database().ref("users");
+    const user1={
+          id:id(),
+          Name:"Sulafah Abdulmannan Najjar",
+          role:"Admin"
+ 
+    }
+    usersRef.push(user1);
+  }
+
+  //-----------------------------------------------
   //todo: Take set Case from AddCase Page
   //todo: Create the Delete Functions and tie it with the server (for Admin only)
-  const[cases,setCase]=useState([
+  /*const[cases,setCase]=useState([
     {id:1,
       text:"Case",
     Num:"1000"
@@ -55,11 +116,7 @@ const fetchCase=async () =>{
     //this change later to tie with specific case 
     console.log('Go to the case :',id);
   }
-
-  //the calling for containers in the main page 
-  return (
-    <div>
-          <Header/>
+            <Header/>
     <div className="container">
  
      <Search onSubmit={SubmitSearch}/>
@@ -67,6 +124,14 @@ const fetchCase=async () =>{
      
     </div>
     <Footer/>
+  
+  */
+
+  //the calling for containers in the main page 
+  return (
+    <div>
+        <input type="text" onChange={handleOnChange} value={cases}/>
+        <button onClick={addCase}>Add</button> 
      </div>
   )
 }
